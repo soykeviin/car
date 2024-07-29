@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
             videoViewerVideo.loop = true;   // Configura el video para que se reproduzca en bucle
             videoViewer.style.display = 'block';
             videoViewerVideo.play(); // Reproduce el video al abrir
+
+            // Evita el comportamiento de pantalla completa en dispositivos móviles
+            videoViewerVideo.addEventListener('webkitfullscreenchange', () => {
+                if (document.fullscreenElement || document.webkitFullscreenElement) {
+                    document.exitFullscreen();
+                }
+            });
         });
     });
 
