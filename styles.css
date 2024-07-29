@@ -115,26 +115,6 @@ main {
 /* VIDEOS AJUSTES */
 
 
-.video-container {
-    display: flex;
-    margin-left: 1px;
-    align-items: center; /* Centra los videos horizontalmente */
-    gap: 5px;
-    margin-top: 20px; 
-}
-
-.video-container video {
-    width: 56%;
-    height: auto;
-    max-width: 400px;
-}
-
-
-/*prueba video */
-
-body {
-    font-family: Arial, sans-serif;
-}
 
 .video-container {
     display: flex;
@@ -160,6 +140,7 @@ body {
     transform: translate(-50%, -50%);
     background: transparent;
     padding: 0;
+    overflow: hidden; /* Asegura que el video no desborde el contenedor */
 }
 
 .video-viewer-content {
@@ -167,6 +148,7 @@ body {
     max-height: 90vh;
     display: block;
     margin: auto;
+    outline: none; /* Elimina el borde del video */
 }
 
 .video-viewer .close {
@@ -178,8 +160,6 @@ body {
     cursor: pointer;
     z-index: 1100;
 }
-
-
 
 
 
